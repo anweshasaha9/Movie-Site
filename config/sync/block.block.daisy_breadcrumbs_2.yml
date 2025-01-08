@@ -1,0 +1,20 @@
+uuid: 98df089a-03fd-4d03-8722-8d3241cccc60
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - daisy
+id: daisy_breadcrumbs_2
+theme: daisy
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,19 @@
+name: 'Daisy'
+type: theme
+description: 'A Drupal Bootstrap 5 based sub-theme for understanding purpose.'
+core_version_requirement: ^10.3 || ^11
+base theme: bootstrap
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  search_button: 'Search Button'
+  breadcrumb: 'Breadcrumb'
+  sidebar_left: 'Left Sidebar'
+  content: 'Content'
+  sidebar_right: 'Right Sidebar'
+  footer: 'Footer'
+
+libraries-extend:
+  bootstrap/global-styling:
+    - daisy/framework

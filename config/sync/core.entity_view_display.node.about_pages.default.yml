@@ -1,0 +1,39 @@
+uuid: 2473b828-3f6a-49b5-92b1-3ac45010cce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_pages.body
+    - field.field.node.about_pages.field_homepage_blocks
+    - node.type.about_pages
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.about_pages.default
+targetEntityType: node
+bundle: about_pages
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_homepage_blocks:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

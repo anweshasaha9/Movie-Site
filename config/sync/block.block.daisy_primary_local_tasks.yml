@@ -1,0 +1,22 @@
+uuid: 6da2fa5a-dfe7-481a-acf5-f6899cb9ed66
+langcode: en
+status: false
+dependencies:
+  theme:
+    - daisy
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: daisy_primary_local_tasks
+theme: daisy
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

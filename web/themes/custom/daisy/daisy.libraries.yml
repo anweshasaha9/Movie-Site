@@ -1,0 +1,9 @@
+framework:
+  css:
+    theme:
+      css/style.css: {}
+
+homepage:
+  css:
+    theme:
+      css/homepage.css: {}

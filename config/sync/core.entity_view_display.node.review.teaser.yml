@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.review.body
-    - field.field.node.review.field_review_genre
     - node.type.review
   module:
     - text
@@ -22,14 +21,6 @@ content:
       trim_length: 600
     third_party_settings: {  }
     weight: 1
-    region: content
-  field_review_genre:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 2
     region: content
   links:
     settings: {  }

@@ -1,0 +1,24 @@
+uuid: ee272d41-8ef3-4784-90d7-9c670c3bde6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.list
+  module:
+    - text
+id: node.list.body
+field_name: body
+entity_type: node
+bundle: list
+label: 'Listing Reason'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

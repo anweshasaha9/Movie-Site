@@ -1,0 +1,27 @@
+uuid: dea690e3-a747-4e30-b256-9848f00a0b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_homepage_blocks
+    - paragraphs.paragraphs_type.homepage
+  module:
+    - block_field
+id: paragraph.homepage.field_homepage_blocks
+field_name: field_homepage_blocks
+entity_type: paragraph
+bundle: homepage
+label: 'Homepage Blocks'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'views_block:latest_reviews_homepage-block_1': 'views_block:latest_reviews_homepage-block_1'
+      'views_block:top_10_lists-block_1': 'views_block:top_10_lists-block_1'
+      'quicktabs_block:news_homepage': 'quicktabs_block:news_homepage'
+field_type: block_field

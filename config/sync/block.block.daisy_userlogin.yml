@@ -1,0 +1,20 @@
+uuid: 673af011-1a18-4261-baa4-1dcd579fd552
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - daisy
+id: daisy_userlogin
+theme: daisy
+region: header
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Login
+  label_display: visible
+  provider: user
+visibility: {  }

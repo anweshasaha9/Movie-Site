@@ -1,0 +1,19 @@
+uuid: 760d8384-6c8f-49cb-9582-d0f8b1f04a79
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_review
+field_name: field_review
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

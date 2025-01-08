@@ -1,0 +1,25 @@
+uuid: a465db69-9121-40fa-b5aa-700ce384907d
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - daisy
+id: daisy_quicktabsnewsquicktabsnews
+theme: daisy
+region: content
+weight: -8
+provider: null
+plugin: 'quicktabs_block:news_quicktabs_news'
+settings:
+  id: 'quicktabs_block:news_quicktabs_news'
+  label: 'QuickTabs - News - Quicktabs News'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news
