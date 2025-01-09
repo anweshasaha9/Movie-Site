@@ -38,6 +38,7 @@
  * @ingroup themeable
  */
 #}
+{# {{ attach_library('daisy/homepage') }}
 {%
   set classes = [
     'paragraph',
@@ -65,6 +66,40 @@
       </div>
     {% endblock %}
   </div>
+{% endblock paragraph %} #}
+{{ attach_library('daisy/homepage') }}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="row">
+        <div class="col-6">
+          {% if content.field_homepage_blocks|length > 0 %}
+            <div class="block block--1">
+              {{ content.field_homepage_blocks[0] }}
+            </div>
+          {% endif %}
+          {% if content.field_homepage_blocks|length > 1 %}
+            <div class="block block--2">
+              {{ content.field_homepage_blocks[1] }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-6">
+          {% if content.field_homepage_blocks|length > 2 %}
+            <div class="block block--3">
+              {{ content.field_homepage_blocks[2] }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
 {% endblock paragraph %}
-
-

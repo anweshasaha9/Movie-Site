@@ -1,0 +1,10 @@
+@import url("utilities/text-style.css");
+
+.movie-links-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.movie-links-wrapper a{
+  text-decoration: underline;
+}

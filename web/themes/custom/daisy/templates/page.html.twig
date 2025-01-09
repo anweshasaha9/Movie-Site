@@ -63,3 +63,18 @@
 		</footer>
 	</div>
 </div>
+
+{# {% for item in items %}
+  <div class="field-item">
+    {% if item.content['#markup'] is not empty %}
+      <div class="image-wrapper">
+        {# Apply a class directly to the image field #}
+        {# {{ item.content|without('class') }}
+        <img src="{{ item.content['#url'] }}" class="custom-image-class" alt="{{ item.alt }}">
+      </div>
+    {% else %}
+      <p>No image available.</p>
+    {% endif %}
+  </div>
+{% endfor %}
+web/themes/custom/daisy/templates/nodes/field--node--field-poster--movie--genre-mode.html.twig  #}

@@ -17,3 +17,13 @@ footer:
   css:
     theme:
       css/footer.css: {}
+
+homepage:
+  css:
+    theme:
+      css/homepage.css: {}
+
+movie-links:
+  css:
+    theme:
+      css/movie-links.css: {}

@@ -1,0 +1,18 @@
+@import url("utilities/text-style.css");
+@import url("utilities/width.css");
+
+.block--1 a {
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-400);
+}
+
+.quicktabs-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.block--3 img {
+  width: var(--width-90);
+  height: var(--width-100);
+}
