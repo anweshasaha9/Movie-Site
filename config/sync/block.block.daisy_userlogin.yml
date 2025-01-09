@@ -9,7 +9,7 @@ dependencies:
 id: daisy_userlogin
 theme: daisy
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: user_login_block
 settings:

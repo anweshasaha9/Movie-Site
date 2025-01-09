@@ -1,111 +1,65 @@
-{# <div class="main-content">
-  <div class="breadcrumb">
-    {{ page.breadcrumb }}
-  </div>
-  <div class="header">
-    {{ page.header }}
-  </div>
-  <div class="content">
-    {{ page.content }}
-  </div>
-  {% if page.left %}
-    <aside class="left-sidebar">
-      {{ page.left }}
-    </aside>
-  {% endif %}
-  {% if page.right %}
-    <aside class="right-sidebar">
-      {{ page.right }}
-    </aside>
-  {% endif %}
-</div>
-
-<footer class="site-footer">
-  <div class="footer">
-    {{ page.footer }}
-  </div>
-</footer> #}
-
 {% set sidebar_left_exists = page.sidebar_left|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_right_exists = page.sidebar_right|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
-
 <div id="page-wrapper">
-  <div id="page">
-    {% block head %}
-      <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-            <div class="container layout-header-row">
-                <!-- Logo in col-2 -->
-                <div class="logo col-2">
-                    {% if logo %}
-                        <img src="{{ logo }}" alt="{{ 'Site logo'|t }}">
-                    {% else %}
-                        <p>{{ 'No logo set'|t }}</p>
-                    {% endif %}
-                </div>
-
-                <!-- Header block (Menu + Search) in col-10 -->
-                <div class="header-content col-10">
-                    <div class="menu-search-wrapper">
-                        <!-- Primary Menu -->
-                        <nav class="primary-menu">
-                            {{ page.primary_menu }}
-                        </nav>
-
-                        <!-- Search Button -->
-                        <div class="search-button">
-                            {{ page.search_button }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    {% endblock %}
-
-    {% if page.breadcrumb %}
-      <div class="breadcrumb-wrapper">
-        {{ page.breadcrumb }}
-      </div>
-    {% endif %}
-
-    <div id="main-wrapper" class="layout-main-wrapper clearfix">
-      {% block content %}
-        <div id="main" class="layout-row">
-          <div class="col-left">
-            {% if sidebar_left_exists %}
-              <aside class="section" role="complementary">
-                {{ page.sidebar_left }}
-              </aside>
-            {% endif %}
-          </div>
-
-          <div class="col-content">
-            <section class="section">
-              <a href="#main-content" id="main-content" tabindex="-1">{{ 'Skip to main content'|t }}</a>
-              {{ page.content }}
-            </section>
-          </div>
-
-          <div class="col-right">
-            {% if sidebar_right_exists %}
-              <aside class="section" role="complementary">
-                {{ page.sidebar_right }}
-              </aside>
-            {% endif %}
-          </div>
-        </div>
-      {% endblock %}
-    </div>
-
-    <footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container|default('container') }}">
-          <div class="site-footer__top clearfix">
-            {{ page.footer|default('') }}
-          </div>
-        </div>
-      {% endblock %}
-    </footer>
-  </div>
+	<div id="page">
+		{% block head %}
+			<header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+				<div class="container layout-header-row">
+					<div class="col-2">
+						{{ page.logo }}
+					</div>
+					<div class="col-10">
+						<div
+							class="menu-search-wrapper">
+							<nav class="primary-menu">
+								{{ page.primary_menu }}
+							</nav>
+							<div class="search-button">
+								{{ page.search_button }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		{% endblock %}
+		<div id="main-wrapper" class="layout-main-wrapper clearfix">
+			<div id="main" class="layout-row">
+				<div class="col-left">
+					{% if sidebar_left_exists %}
+						<aside class="section" role="complementary">
+							{{ page.sidebar_left }}
+						</aside>
+					{% endif %}
+				</div>
+				<div class="col-content">
+					{% if page.breadcrumb %}
+						<div class="breadcrumb-wrapper">
+							{{ page.breadcrumb }}
+						</div>
+					{% endif %}
+					<section class="section">
+						{% block content %}
+							{{ page.content }}
+						{% endblock %}
+					</section>
+				</div>
+				<div class="col-right">
+					{% if sidebar_right_exists %}
+						<aside class="section" role="complementary">
+							{{ page.sidebar_right }}
+						</aside>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<footer class="site-footer">
+			{% block footer %}
+				<div class="{{ container|default('container') }}">
+					<div class="site-footer__top clearfix">
+						{{ page.footer|default('') }}
+					</div>
+				</div>
+			{% endblock %}
+		</footer>
+	</div>
 </div>
-
-

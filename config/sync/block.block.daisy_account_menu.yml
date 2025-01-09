@@ -13,7 +13,7 @@ _core:
 id: daisy_account_menu
 theme: daisy
 region: header
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:account'
 settings:

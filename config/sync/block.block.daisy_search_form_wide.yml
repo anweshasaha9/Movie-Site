@@ -11,7 +11,7 @@ _core:
 id: daisy_search_form_wide
 theme: daisy
 region: header
-weight: -11
+weight: -12
 provider: null
 plugin: search_form_block
 settings:

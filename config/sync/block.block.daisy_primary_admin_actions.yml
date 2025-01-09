@@ -9,7 +9,7 @@ _core:
 id: daisy_primary_admin_actions
 theme: daisy
 region: header
-weight: -5
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

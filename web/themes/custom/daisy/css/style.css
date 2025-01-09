@@ -1,47 +1,58 @@
+@import url("utilities/list-utilities.css");
+
 .layout-row {
-    display: grid;
-    grid-template-columns: 25% 1fr 25%; /* Left sidebar, content, right sidebar */
-    gap: 20px; /* Space between columns */
+  display: grid;
+  grid-template-columns: 25% 1fr 25%;
+  gap: 20px;
+}
+
+.col-left,
+.col-right {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.col-content {
+  background-color: #ffffff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.layout-header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  flex: 0 0 16.666%;
+  max-width: 16.666%;
+  text-align: left;
+}
+
+.menu-search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-menu {
+  flex-grow: 1;
+}
+
+.search-button {
+  margin-left: 20px;
+}
+
+/* Footer Styling */
+.site-footer {
+  background: #f8f9fa;
+  section {
+    &.region-footer {
+      margin: auto;
+      width: 100%;
+    }
   }
-  
-  .col-left, .col-right {
-    background-color: #f8f9fa;
-    padding: 10px;
-  }
-  
-  .col-content {
-    background-color: #ffffff;
-    padding: 10px;
-  }
-  
-  .layout-header-row {
-    display: flex;
-    align-items: center; /* Align logo and header content vertically in the middle */
-    gap: 20px; /* Optional: Adds spacing between columns */
-  }
-  
-  .logo {
-    flex: 0 0 16.666%; /* col-2 in a 12-column grid */
-    max-width: 16.666%; /* Ensure it doesn't exceed col-2 */
-    text-align: left; /* Align logo to the left */
-  }
-  
-  .header-content {
-    flex: 0 0 83.333%; /* col-10 in a 12-column grid */
-    max-width: 83.333%;
-  }
-  
-  .menu-search-wrapper {
-    display: flex;
-    justify-content: space-between; /* Place menu and search button horizontally */
-    align-items: center;
-  }
-  
-  .primary-menu {
-    flex-grow: 1; /* Allow the menu to grow as needed */
-  }
-  
-  .search-button {
-    margin-left: 20px; /* Optional spacing between menu and search */
-  }
-  
+}

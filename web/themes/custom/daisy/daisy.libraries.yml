@@ -3,7 +3,17 @@ framework:
     theme:
       css/style.css: {}
 
-homepage:
+logo:
   css:
     theme:
-      css/homepage.css: {}
+      css/logo.css: {}
+
+primary_menu:
+  css:
+    theme:
+      css/primary_menu.css: {}
+
+footer:
+  css:
+    theme:
+      css/footer.css: {}

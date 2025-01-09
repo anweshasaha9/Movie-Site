@@ -1,9 +1,0 @@
-.col-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.col-content > .block-views-blocklatest-reviews-block-1 {
-    grid-column: 2;
-}
