@@ -1,0 +1,22 @@
+uuid: 39ae6983-9166-4554-8e79-f90e806a3829
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - daisy
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: daisy_help
+theme: daisy
+region: header
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

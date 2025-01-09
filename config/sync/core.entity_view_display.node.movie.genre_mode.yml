@@ -5,20 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.genre_mode
     - field.field.node.movie.body
-    - field.field.node.movie.field_buy_on_dvd
     - field.field.node.movie.field_genre
-    - field.field.node.movie.field_in_cinemas
-    - field.field.node.movie.field_netflix
+    - field.field.node.movie.field_links
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_poster
     - field.field.node.movie.field_release_date
-    - field.field.node.movie.field_trailers
+    - field.field.node.movie.field_review
     - field.field.node.movie.layout_builder__layout
     - node.type.movie
   module:
     - datetime
     - image
     - layout_builder
-    - link
     - text
     - user
 third_party_settings:
@@ -138,99 +136,7 @@ third_party_settings:
         layout_settings:
           label: ''
           context_mapping: {  }
-        components:
-          ec4f01e5-039c-4104-815f-be7c8ed844ad:
-            uuid: ec4f01e5-039c-4104-815f-be7c8ed844ad
-            region: first
-            configuration:
-              id: 'field_block:node:movie:field_trailers'
-              label: Trailers
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          5457fd5f-e256-4077-a75b-574066c8dee0:
-            uuid: 5457fd5f-e256-4077-a75b-574066c8dee0
-            region: second
-            configuration:
-              id: 'field_block:node:movie:field_in_cinemas'
-              label: 'In Cinemas'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          50fe66db-587d-439d-814e-b7e55c7a2d19:
-            uuid: 50fe66db-587d-439d-814e-b7e55c7a2d19
-            region: third
-            configuration:
-              id: 'field_block:node:movie:field_buy_on_dvd'
-              label: 'Buy on DVD'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          a88d5986-9464-4c37-bb1f-089fa78d1c9b:
-            uuid: a88d5986-9464-4c37-bb1f-089fa78d1c9b
-            region: fourth
-            configuration:
-              id: 'field_block:node:movie:field_netflix'
-              label: Netflix
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
+        components: {  }
         third_party_settings: {  }
 id: node.movie.genre_mode
 targetEntityType: node
@@ -244,18 +150,6 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_buy_on_dvd:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 104
-    region: content
   field_genre:
     type: entity_reference_label
     label: above
@@ -263,30 +157,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 108
-    region: content
-  field_in_cinemas:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_netflix:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 105
     region: content
   field_poster:
     type: image
@@ -308,22 +178,13 @@ content:
     third_party_settings: {  }
     weight: 106
     region: content
-  field_trailers:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 102
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_links: true
+  field_movie_rating: true
+  field_review: true
   layout_builder__layout: true

@@ -5,13 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.movie.body
-    - field.field.node.movie.field_buy_on_dvd
     - field.field.node.movie.field_genre
-    - field.field.node.movie.field_in_cinemas
-    - field.field.node.movie.field_netflix
+    - field.field.node.movie.field_links
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_poster
     - field.field.node.movie.field_release_date
-    - field.field.node.movie.field_trailers
+    - field.field.node.movie.field_review
     - field.field.node.movie.layout_builder__layout
     - node.type.movie
   module:
@@ -36,11 +35,10 @@ content:
     weight: 100
     region: content
 hidden:
-  field_buy_on_dvd: true
   field_genre: true
-  field_in_cinemas: true
-  field_netflix: true
+  field_links: true
+  field_movie_rating: true
   field_poster: true
   field_release_date: true
-  field_trailers: true
+  field_review: true
   layout_builder__layout: true

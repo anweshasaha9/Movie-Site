@@ -1,0 +1,27 @@
+uuid: 04e56350-8211-4d7c-83c1-c10b911e0d66
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - daisy
+id: daisy_userlogin_2
+theme: daisy
+region: sidebar_left
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: '0'
+  provider: user
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

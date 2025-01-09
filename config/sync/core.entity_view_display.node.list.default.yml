@@ -1,0 +1,92 @@
+uuid: e2797a4f-0573-4161-8ff4-0c4c3726c1be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.list.body
+    - field.field.node.list.field_list_movies
+    - field.field.node.list.layout_builder__layout
+    - node.type.list
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Main
+          context_mapping: {  }
+        components:
+          87c8c963-f48d-46c5-a37c-f561624543b6:
+            uuid: 87c8c963-f48d-46c5-a37c-f561624543b6
+            region: content
+            configuration:
+              id: 'field_block:node:list:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d0c2399f-f94e-4efd-a4df-d4bb55b4509e:
+            uuid: d0c2399f-f94e-4efd-a4df-d4bb55b4509e
+            region: content
+            configuration:
+              id: 'field_block:node:list:body'
+              label: 'Why these are in the list'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.list.default
+targetEntityType: node
+bundle: list
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_list_movies:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true

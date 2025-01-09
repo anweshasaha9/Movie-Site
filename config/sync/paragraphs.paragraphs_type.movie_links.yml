@@ -1,0 +1,10 @@
+uuid: 5cebac35-a68f-454e-8ddd-ca591840b3d1
+langcode: en
+status: true
+dependencies: {  }
+id: movie_links
+label: 'Movie Links'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

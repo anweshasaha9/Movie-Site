@@ -1,0 +1,5 @@
+@import url("utilities/width.css");
+
+.page_logo {
+  width: var(--width-100);
+}

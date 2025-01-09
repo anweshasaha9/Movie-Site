@@ -1,0 +1,18 @@
+uuid: 8961f3ec-2606-400c-8ba5-de39b5ec034c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - daisy
+id: daisy_primaryadminactions
+theme: daisy
+region: content
+weight: -12
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

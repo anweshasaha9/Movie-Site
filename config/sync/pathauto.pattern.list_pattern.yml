@@ -1,0 +1,22 @@
+uuid: 0d9912db-4560-4b97-a7a3-4977c2b53d2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: list_pattern
+label: 'List Pattern'
+type: 'canonical_entities:node'
+pattern: '/top-ten-lists/[node:title]'
+selection_criteria:
+  401d035c-2af6-4eb9-967b-4e723901090c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 401d035c-2af6-4eb9-967b-4e723901090c
+    context_mapping:
+      node: node
+    bundles:
+      list: list
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,5 @@
+@import url("utilities/list-utilities.css");
+.navbar-nav {
+  flex-direction: row;
+  justify-content: space-around;
+}
