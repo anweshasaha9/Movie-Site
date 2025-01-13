@@ -17,12 +17,168 @@ dependencies:
     - datetime
     - image
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
+    enabled: true
     allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Link Section'
+          context_mapping: {  }
+        components:
+          48da13ec-6552-4b2a-bf37-63380f520329:
+            uuid: 48da13ec-6552-4b2a-bf37-63380f520329
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_links'
+              label: Links
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Release Section'
+          context_mapping: {  }
+        components:
+          996e7dcb-2a8d-44f4-8582-f110cd9f3dc4:
+            uuid: 996e7dcb-2a8d-44f4-8582-f110cd9f3dc4
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_release_date'
+              label: 'Release Date:'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_custom
+                label: inline
+                settings:
+                  timezone_override: ''
+                  date_format: d/m/Y
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Plot Section'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          3909254d-43e3-47b8-9b17-dfac83d93089:
+            uuid: 3909254d-43e3-47b8-9b17-dfac83d93089
+            region: first
+            configuration:
+              id: 'field_block:node:movie:field_poster'
+              label: Poster
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          22d93621-b421-45d3-b760-1d7d51feb01d:
+            uuid: 22d93621-b421-45d3-b760-1d7d51feb01d
+            region: second
+            configuration:
+              id: 'field_block:node:movie:body'
+              label: Plot
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Review Section'
+          context_mapping: {  }
+        components:
+          31685771-172e-40a2-814b-04e0bdbe487d:
+            uuid: 31685771-172e-40a2-814b-04e0bdbe487d
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_review'
+              label: Review
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Genre Section'
+          context_mapping: {  }
+        components:
+          5a4cc09c-ad04-45a7-83a0-47fef49231a2:
+            uuid: 5a4cc09c-ad04-45a7-83a0-47fef49231a2
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_genre'
+              label: Genre
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.movie.full
 targetEntityType: node
 bundle: movie

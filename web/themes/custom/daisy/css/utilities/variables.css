@@ -1,0 +1,24 @@
+:root {
+
+  /* Colors */
+  --primary: #e7d9d8;
+  --menu-primary: #817372;
+  --hover-primary: white;
+  --button-primary: #da696d;
+  --button-secondary: #b24d50;
+  --light-pink: rgba(255, 0, 0, 0.08);
+  --black: black;
+  --white: white;
+
+  /* Font Sizes */
+  --font-size-25: 25px;
+  --font-size-22: 22px;
+  --font-size-15: 15px;
+
+  /* Font Weights */
+  --font-weight-600: 600;
+  --font-weight-400: 400;
+
+  --width-100: 100px;
+  --width-90: 90px;
+}

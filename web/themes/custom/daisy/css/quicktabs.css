@@ -1,0 +1,45 @@
+@import url("utilities/variables.css");
+
+.pamela {
+  ul.quicktabs-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    li {
+      width: 50%;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: var(----menu-primary);
+      }
+      &:hover {
+        color: var(----menu-primary);
+      }
+    }
+    &:active {
+      a {
+        color: var(----menu-primary);
+        background: var(----menu-primary);
+      }
+      &:hover {
+        color: var(----menu-primary);
+      }
+    }
+  }
+  .quicktabs-main {
+    padding: 0;
+    >.quicktabs-tabpage {
+      border-radius: inherit;
+      width: 100%;
+      background: var(--menu-primary);
+      color: var(--primary);
+      a {
+        color: var(--primary);
+      }
+    }
+  }
+}

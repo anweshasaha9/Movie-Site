@@ -1,0 +1,23 @@
+.views-view-table {
+  border: 2px solid var(--black);
+  th {
+    border: 2px solid var(--black);
+    color: var(--black); 
+    font-weight: bolder;
+    font-size: larger;
+  }
+  td {
+    border: 2px solid var(--black);
+    color: var(--var(--black));
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: var(--white);
+      }
+      &:nth-child(odd) {
+        background-color: var(--light-pink);
+      }
+    }
+  }
+}

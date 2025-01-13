@@ -1,3 +1,9 @@
+global-styling:
+  css:
+    theme:
+      css/variables.css: {}
+      css/styles.css: {}
+
 framework:
   css:
     theme:
@@ -27,3 +33,13 @@ movie-links:
   css:
     theme:
       css/movie-links.css: {}
+
+quicktabs:
+  css:
+    theme:
+      css/quicktabs.css: {}
+
+block-list:
+  css:
+    theme:
+      css/elements/block-list.css: {}

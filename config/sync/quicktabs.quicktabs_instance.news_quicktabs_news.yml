@@ -11,7 +11,7 @@ options:
   quick_tabs:
     ajax: false
     class: ''
-    style: tabsbar
+    style: pamela
   accordion_tabs:
     jquery_ui:
       collapsible: false
@@ -27,6 +27,9 @@ configuration_data:
           vid: block_content
           display: default
           args: ''
+      qtabs_content:
+        options:
+          machine_name: news_homepage
       node_content:
         options:
           nid: ''
@@ -37,9 +40,6 @@ configuration_data:
           bid: 'views_block:news_quicktab-block_1'
           block_title: ''
           display_title: false
-      qtabs_content:
-        options:
-          machine_name: ''
   -
     title: 'Celebrity News'
     weight: 0
@@ -50,6 +50,9 @@ configuration_data:
           vid: block_content
           display: default
           args: ''
+      qtabs_content:
+        options:
+          machine_name: news_homepage
       node_content:
         options:
           nid: ''
@@ -60,6 +63,3 @@ configuration_data:
           bid: 'views_block:news_quicktab-block_2'
           block_title: ''
           display_title: false
-      qtabs_content:
-        options:
-          machine_name: ''

@@ -23,25 +23,6 @@ third_party_settings:
           label: Main
           context_mapping: {  }
         components:
-          87c8c963-f48d-46c5-a37c-f561624543b6:
-            uuid: 87c8c963-f48d-46c5-a37c-f561624543b6
-            region: content
-            configuration:
-              id: 'field_block:node:list:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           d0c2399f-f94e-4efd-a4df-d4bb55b4509e:
             uuid: d0c2399f-f94e-4efd-a4df-d4bb55b4509e
             region: content
@@ -60,6 +41,25 @@ third_party_settings:
                   trim_length: 600
                 third_party_settings: {  }
             weight: 1
+            additional: {  }
+          1eefba33-3d03-4e35-966e-fcd7fa16681a:
+            uuid: 1eefba33-3d03-4e35-966e-fcd7fa16681a
+            region: content
+            configuration:
+              id: 'field_block:node:list:field_list_movies'
+              label: 'List Movies'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: movie_card_list_mode
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
 id: node.list.default

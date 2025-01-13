@@ -10,7 +10,7 @@ dependencies:
 id: daisy_quicktabsnewsquicktabsnews
 theme: daisy
 region: content
-weight: -8
+weight: -9
 provider: null
 plugin: 'quicktabs_block:news_quicktabs_news'
 settings:

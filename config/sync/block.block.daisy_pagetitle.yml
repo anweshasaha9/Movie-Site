@@ -2,12 +2,14 @@ uuid: 93752b86-2510-4d21-a002-0e6721425e77
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - daisy
 id: daisy_pagetitle
 theme: daisy
 region: content
-weight: -13
+weight: -11
 provider: null
 plugin: page_title_block
 settings:
@@ -15,4 +17,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/homepage-main\r\n/top-ten-lists/*"

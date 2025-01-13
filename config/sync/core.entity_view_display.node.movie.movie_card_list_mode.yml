@@ -1,8 +1,9 @@
-uuid: e9828c82-25ea-4ba8-9851-4d20070316ab
+uuid: 2b57db20-f6f5-4294-9482-9f0ce87e0b2e
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.movie_card_list_mode
     - field.field.node.movie.body
     - field.field.node.movie.field_genre
     - field.field.node.movie.field_links
@@ -22,39 +23,20 @@ dependencies:
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: Authored
+          label: 'Created On'
           context_mapping: {  }
         components:
-          01514cea-718c-4629-be78-3a09d8142503:
-            uuid: 01514cea-718c-4629-be78-3a09d8142503
-            region: content
-            configuration:
-              id: 'field_block:node:movie:uid'
-              label: by
-              label_display: visible
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          6d449cf3-88dc-47f8-90ae-b28ee0da6d68:
-            uuid: 6d449cf3-88dc-47f8-90ae-b28ee0da6d68
+          f5d2cf8a-882b-4523-8bcf-9de5fd38596e:
+            uuid: f5d2cf8a-882b-4523-8bcf-9de5fd38596e
             region: content
             configuration:
               id: 'field_block:node:movie:created'
-              label: 'on'
+              label: 'Created on'
               label_display: visible
               provider: layout_builder
               context_mapping:
@@ -78,17 +60,17 @@ third_party_settings:
                     refresh: 60
                     description: ''
                 third_party_settings: {  }
-            weight: 1
+            weight: 0
             additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
-          label: 'Links Section'
+          label: Links
           context_mapping: {  }
         components:
-          fa6d961a-e810-428f-8600-ba719beae050:
-            uuid: fa6d961a-e810-428f-8600-ba719beae050
+          7e8414a1-a41d-418a-b576-e34974e82a6e:
+            uuid: 7e8414a1-a41d-418a-b576-e34974e82a6e
             region: content
             configuration:
               id: 'field_block:node:movie:field_links'
@@ -104,64 +86,18 @@ third_party_settings:
                 settings:
                   view_mode: default
                 third_party_settings: {  }
-            weight: 3
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Release section'
-          context_mapping: {  }
-        components:
-          efaa5cfb-155a-498a-93c3-792d94019279:
-            uuid: efaa5cfb-155a-498a-93c3-792d94019279
-            region: content
-            configuration:
-              id: 'field_block:node:movie:field_release_date'
-              label: 'Release Date:'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: datetime_custom
-                label: inline
-                settings:
-                  timezone_override: ''
-                  date_format: d/m/Y
-                third_party_settings: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
-          label: 'Poster Section'
+          label: 'Mid Sec'
           context_mapping: {  }
-          column_widths: 25-75
+          column_widths: 33-67
         components:
-          cc7d8b72-3c71-46a7-94b5-4886736755da:
-            uuid: cc7d8b72-3c71-46a7-94b5-4886736755da
-            region: second
-            configuration:
-              id: 'field_block:node:movie:body'
-              label: Plot
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_trimmed
-                label: above
-                settings:
-                  trim_length: 300
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
-          751ba96f-71fb-4a1b-b532-3e2a84625b79:
-            uuid: 751ba96f-71fb-4a1b-b532-3e2a84625b79
+          29cae068-bc35-428c-a4d1-f68f6fdfd79b:
+            uuid: 29cae068-bc35-428c-a4d1-f68f6fdfd79b
             region: first
             configuration:
               id: 'field_block:node:movie:field_poster'
@@ -176,26 +112,19 @@ third_party_settings:
                 label: hidden
                 settings:
                   image_link: ''
-                  image_style: ''
+                  image_style: medium
                   image_loading:
                     attribute: lazy
                 third_party_settings: {  }
-            weight: 1
+            weight: 0
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Review Section'
-          context_mapping: {  }
-        components:
-          df8d7b94-9a39-42ad-b8a0-ce110bc74513:
-            uuid: df8d7b94-9a39-42ad-b8a0-ce110bc74513
-            region: content
+          4527ee33-79e8-4dfe-acfb-12da2ddf25e8:
+            uuid: 4527ee33-79e8-4dfe-acfb-12da2ddf25e8
+            region: second
             configuration:
-              id: 'field_block:node:movie:field_review'
-              label: Review
-              label_display: visible
+              id: 'field_block:node:movie:body'
+              label: Plot
+              label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
@@ -204,41 +133,15 @@ third_party_settings:
                 type: text_trimmed
                 label: hidden
                 settings:
-                  trim_length: 500
+                  trim_length: 200
                 third_party_settings: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Genre Section'
-          context_mapping: {  }
-        components:
-          438b260a-8a45-421e-af7a-dd4cdf14346d:
-            uuid: 438b260a-8a45-421e-af7a-dd4cdf14346d
-            region: content
-            configuration:
-              id: 'field_block:node:movie:field_genre'
-              label: Genre
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: hidden
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-id: node.movie.default
+id: node.movie.movie_card_list_mode
 targetEntityType: node
 bundle: movie
-mode: default
+mode: movie_card_list_mode
 content:
   body:
     type: text_default

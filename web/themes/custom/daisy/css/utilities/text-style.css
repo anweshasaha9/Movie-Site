@@ -3,6 +3,7 @@
 
 h2 {
   font-size: var(--font-size-25);
+  color: var(--menu-primary);
 }
 
 p {

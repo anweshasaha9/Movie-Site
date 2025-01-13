@@ -50,6 +50,8 @@ module:
   quicktabs: 0
   quicktabs_accordion: 0
   quicktabs_jqueryui: 0
+  responsive_image: 0
+  responsive_menus: 0
   search: 0
   shortcut: 0
   system: 0

@@ -1,11 +1,11 @@
-uuid: 36715706-1b00-4cdf-a4c8-41d6795f1b99
+uuid: edf7bbf7-5683-40f6-90f9-d5067db9a998
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.genre_mode
-label: 'Movie Card Mode'
+id: node.movie_card_list_mode
+label: 'Movie Card List Mode'
 description: ''
 targetEntityType: node
 cache: true

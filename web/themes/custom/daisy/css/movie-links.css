@@ -1,10 +1,27 @@
 @import url("utilities/text-style.css");
 
+.movie-links {
+  /* display: flex; */
+  padding-right: 20px;
+  border-right: 2px solid var(--menu-primary);
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
 .movie-links-wrapper {
   display: flex;
-  justify-content: space-around;
+  margin: 20px 0;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .movie-links-wrapper a{
   text-decoration: underline;
+  color: var(--menu-primary);
+
+  &:hover {
+    color: var(--button-secondary);
+  }
 }

@@ -1,0 +1,5 @@
+.field--name-field-genre {
+  display: flex;
+  column-gap: 20px;
+  align-items: stretch;
+}

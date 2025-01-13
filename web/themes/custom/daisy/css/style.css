@@ -1,19 +1,31 @@
-@import url("utilities/list-utilities.css");
+/* @import url("utilities/list-utilities.css"); */
+@import url("utilities/variables.css");
+@import url("elements/button.css");
+@import url("elements/breadcrumbs.css");
+@import url("elements/views-table.css");
+@import url("elements/genre.css");
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 .layout-row {
+  background: var(--primary);
   display: grid;
   grid-template-columns: 25% 1fr 25%;
-  gap: 20px;
+  gap: 1.1%;
+  padding: 1.1% 0;
 }
 
 .col-left,
 .col-right {
-  background-color: #f8f9fa;
+  background-color: var(--primary);
   padding: 10px;
 }
 
 .col-content {
-  background-color: #ffffff;
+  background-color: var(--primary);
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr;
@@ -46,13 +58,64 @@
   margin-left: 20px;
 }
 
+.header {
+  background: var(--menu-primary);
+  color: var(--primary);
+
+  &:hover {
+    color: var(--hover-primary);
+  }
+}
+
 /* Footer Styling */
 .site-footer {
-  background: #f8f9fa;
+  background: var(--menu-primary);
+  position: relative;
+  width: 100%;
+  bottom: 0; 
   section {
     &.region-footer {
       margin: auto;
       width: 100%;
     }
   }
+}
+
+.nav-link {
+  color: var(--primary); /* Default color */
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, color;
+  transition-property: transform, color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--hover-primary); /* Change color on hover */
+    -webkit-transform: scale(1.1); /* Apply grow effect */
+    transform: scale(1.1);
+  }
+}
+
+.search-form {
+  column-gap: 10px;
+  align-items: center;
+}
+
+/* For hiding metadata across all requried pages */
+.node__content, .view-content, .node--type-movie, .node--type-about-pages {
+  .node__meta {
+    display: none;
+  }
+}
+
+/* Created On for all required pages */
+.block-field-blocknodemoviecreated {
+  display: flex;
+  column-gap: 2%;
 }

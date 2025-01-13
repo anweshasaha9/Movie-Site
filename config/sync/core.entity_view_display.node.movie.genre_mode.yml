@@ -17,6 +17,7 @@ dependencies:
     - datetime
     - image
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -25,34 +26,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Created On'
           context_mapping: {  }
-          column_widths: 25-75
         components:
-          e013c74d-ab57-46ea-bcf3-d2cadc6ec1d4:
-            uuid: e013c74d-ab57-46ea-bcf3-d2cadc6ec1d4
-            region: first
-            configuration:
-              id: 'field_block:node:movie:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          e40789b3-0b20-449d-9b31-0b69ed064970:
-            uuid: e40789b3-0b20-449d-9b31-0b69ed064970
-            region: second
+          0514e436-e86c-441a-bc12-7fd7d71e92a8:
+            uuid: 0514e436-e86c-441a-bc12-7fd7d71e92a8
+            region: content
             configuration:
               id: 'field_block:node:movie:created'
               label: 'Created on'
@@ -63,10 +44,10 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: timestamp
-                label: inline
+                label: hidden
                 settings:
-                  date_format: html_date
-                  custom_date_format: ''
+                  date_format: custom
+                  custom_date_format: d/m/y
                   timezone: ''
                   tooltip:
                     date_format: long
@@ -89,28 +70,6 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 25-75
         components:
-          19be6ae4-f52e-4303-a77b-9f162883c8bb:
-            uuid: 19be6ae4-f52e-4303-a77b-9f162883c8bb
-            region: first
-            configuration:
-              id: 'field_block:node:movie:field_poster'
-              label: Poster
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           150d99a8-dfac-4382-be71-7c4d9cc29b64:
             uuid: 150d99a8-dfac-4382-be71-7c4d9cc29b64
             region: second
@@ -130,13 +89,54 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          0d624f52-79a7-4c06-b483-05a42b28081e:
+            uuid: 0d624f52-79a7-4c06-b483-05a42b28081e
+            region: first
+            configuration:
+              id: 'field_block:node:movie:field_poster'
+              label: Poster
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
       -
-        layout_id: layout_fourcol_section
+        layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Links Section'
           context_mapping: {  }
-        components: {  }
+        components:
+          c9d0ca5c-6eb3-464b-beb6-9599e97991dc:
+            uuid: c9d0ca5c-6eb3-464b-beb6-9599e97991dc
+            region: content
+            configuration:
+              id: 'field_block:node:movie:field_links'
+              label: Links
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: node.movie.genre_mode
 targetEntityType: node
@@ -150,6 +150,18 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_buy_on_dvd:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
   field_genre:
     type: entity_reference_label
     label: above
@@ -157,6 +169,30 @@ content:
       link: true
     third_party_settings: {  }
     weight: 108
+    region: content
+  field_in_cinemas:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_netflix:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_poster:
     type: image
@@ -177,6 +213,18 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_trailers:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }
