@@ -1,0 +1,48 @@
+uuid: 4c3f1eb5-2728-4a60-b72b-f3cc6abc2630
+langcode: en
+status: false
+dependencies:
+  module:
+    - cheeseburger_menu
+  theme:
+    - daisy
+id: daisy_cheeseburgermenu
+theme: daisy
+region: primary_menu
+weight: -12
+provider: null
+plugin: cheesebuger_menu_block
+settings:
+  id: cheesebuger_menu_block
+  label: 'Cheeseburger Menu'
+  label_display: '0'
+  provider: cheeseburger_menu
+  block_machine_name: daisy_cheeseburgermenu
+  depth: 0
+  css_default: true
+  show_navigation: true
+  active_state_enable: false
+  header_height: 0
+  parent_menu_as_link: false
+  hidden_by_default: true
+  phone:
+    show: false
+    menu_weight: 0
+    store: 0
+    manual_title: ''
+  lang_switcher:
+    show: false
+    menu_weight: 0
+  cart:
+    show: false
+    menu_weight: 0
+  breakpoints:
+    all: true
+  menu:
+    main:
+      title: do_not_show
+      manual_title: ''
+      collapsible_title: false
+      menu_weight: 0
+  taxonomy_vocabulary: {  }
+visibility: {  }

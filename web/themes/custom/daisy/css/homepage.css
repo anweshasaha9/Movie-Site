@@ -83,6 +83,18 @@
   .col-6 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 }
+
+@media (min-width: 350px) and (max-width: 1280px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+

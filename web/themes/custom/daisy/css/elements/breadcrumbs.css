@@ -1,7 +1,17 @@
-.breadcrumb-item a {
-  color: var(--menu-primary);
-
-  &:hover {
+.breadcrumb-item {
+  &.active {
     color: var(--button-secondary);
+  }
+
+  a {
+    color: var(--default-color, #000);
+    
+    &:hover {
+      color: var(--button-secondary); 
+    }
+    
+    &:focus, &:active {
+      color: var(--button-secondary); 
+    }
   }
 }

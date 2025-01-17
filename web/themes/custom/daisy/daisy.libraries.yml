@@ -1,8 +1,12 @@
 global-styling:
   css:
     theme:
-      css/variables.css: {}
+      css/utilities/variables.css: {}
       css/styles.css: {}
+  js: 
+    js/breakpoints.config.js: {}
+  dependencies:
+    - core/drupal
 
 framework:
   css:

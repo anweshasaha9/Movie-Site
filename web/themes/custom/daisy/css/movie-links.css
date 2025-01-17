@@ -25,3 +25,14 @@
     color: var(--button-secondary);
   }
 }
+
+@media (min-width: 350px) and (max-width: 768px) {
+  .movie-links {
+    border: none;
+  }
+
+  .movie-links-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

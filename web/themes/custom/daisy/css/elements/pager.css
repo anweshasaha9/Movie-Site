@@ -1,0 +1,53 @@
+/* .pagination {
+  span {
+    color: var(--menu-primary);
+    border-color: var(--menu-primary);
+
+    &:hover {
+      color: var(--white);
+      background: var(--button-secondary);
+    }
+  }
+} */
+/* Style for the pagination container */
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Common styles for all page items */
+.page-item {
+  border: 1px solid var(--white); 
+  border-radius: 4px;
+}
+
+/* Default active page styles */
+.page-item.active .page-link {
+  background-color: var(--button-secondary);
+  color: var(--white);
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Hover styles for the active page */
+.page-item.active:hover .page-link {
+  color: var(--black);
+}
+
+/* Default styles for non-active page links */
+.page-item .page-link {
+  color: var(--button-secondary);
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for non-active page links */
+.page-item:hover .page-link {
+  background-color: var(--light-pink);
+  color: var(--button-secondary);
+}

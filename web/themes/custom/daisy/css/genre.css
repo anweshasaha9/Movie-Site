@@ -2,4 +2,8 @@
   display: flex;
   column-gap: 20px;
   align-items: stretch;
+
+  a {
+    color: var(--menu-primary);
+  }
 }

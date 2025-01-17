@@ -1,5 +1,41 @@
 @import url("utilities/list-utilities.css");
+@import url("utilities/link.css");
+
 .navbar-nav {
   flex-direction: row;
   justify-content: space-around;
+}
+
+/* @media only screen and (min-width: 480px) {
+  .nav{
+    justify-content: center;
+  }
+} */
+
+.dropdown-menu {
+  background: var(--light-pink);
+
+  li {
+    &:hover {
+      background: var(--white);
+    }
+
+    &:hover a {
+      color: var(--menu-primary);
+    }
+    
+    a {
+      color: var(--black);
+    }
+  }
+}
+
+@media (min-width: 350px) and (max-width: 1280px) {
+  .menu-search-wrapper {
+    flex-direction: column;
+  }
+
+  .search-form {
+    display: none;
+  }
 }

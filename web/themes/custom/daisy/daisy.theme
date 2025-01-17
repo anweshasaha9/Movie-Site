@@ -4,6 +4,8 @@
  * Implements hook_preprocess_block() for node templates.
  */
 function daisy_preprocess_block(&$variables) {
+
+  // Quitabs library attachment to quicktabs block
   // Get the block's machine name.
   $block_id = $variables['elements']['#id'] ?? '';
   // Check if the block's ID contains 'quicktabsnews'.
@@ -18,6 +20,10 @@ function daisy_preprocess_block(&$variables) {
   if (in_array($block_id, $block_list_view)) {
     $variables['#attached']['library'][] = 'daisy/block-list';
   }
+
+  // Pager library attachment to site pager accross all pages
+  
+
 }
 
 

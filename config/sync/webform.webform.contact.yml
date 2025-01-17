@@ -23,6 +23,11 @@ elements: |-
     '#type': textfield
     '#required': true
     '#default_value': '[current-user:display-name]'
+  phone_number:
+    '#type': number
+    '#title': 'Phone Number'
+    '#title_display': before
+    '#required': true
   email:
     '#type': email
     '#title': 'Email Address'

@@ -1,13 +1,26 @@
-/* @import url("utilities/list-utilities.css"); */
+/* css files */
 @import url("utilities/variables.css");
 @import url("elements/button.css");
 @import url("elements/breadcrumbs.css");
 @import url("elements/views-table.css");
-@import url("elements/genre.css");
+@import url("genre.css");
+@import url("elements/pager.css");
+@import url("utilities/breakpoints.css");
 
 * {
   padding: 0;
   margin: 0;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures #page spans the entire viewport height */
+}
+
+#main-wrapper {
+  flex: 1;
+  background: var(--primary) /* Allows the main content to take up the remaining space */
 }
 
 .layout-row {
@@ -69,6 +82,7 @@
 
 /* Footer Styling */
 .site-footer {
+  margin-top: auto;
   background: var(--menu-primary);
   position: relative;
   width: 100%;
@@ -79,10 +93,14 @@
       width: 100%;
     }
   }
+
+  ul{
+    justify-content: center;
+  }
 }
 
 .nav-link {
-  color: var(--primary); /* Default color */
+  color: var(--primary);
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -96,8 +114,8 @@
   &:hover,
   &:focus,
   &:active {
-    color: var(--hover-primary); /* Change color on hover */
-    -webkit-transform: scale(1.1); /* Apply grow effect */
+    color: var(--hover-primary); 
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -105,6 +123,7 @@
 .search-form {
   column-gap: 10px;
   align-items: center;
+  flex-flow: initial !important;
 }
 
 /* For hiding metadata across all requried pages */
@@ -119,3 +138,38 @@
   display: flex;
   column-gap: 2%;
 }
+
+
+/* Media Query */
+
+/* @media (min-width: 400px) and (max-width: 1600px) {
+  .layout-row {
+    padding: 0 20px 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    ul {
+      justify-content: center;
+    }
+  }
+} */
+
+@media (min-width: 350px) and (max-width: 1280px) {
+  .layout-row {
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+    gap: 0;
+  }
+
+  .site-footer {
+    ul {
+      flex-direction: column !important;
+    }
+  }
+
+  .col-content {
+    gap: 0;
+  }
+}
+

@@ -1,35 +1,36 @@
 @import url("utilities/variables.css");
 
 .pamela {
-  ul.quicktabs-tabs {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0;
-    li {
-      width: 50%;
-      background-color: transparent;
-      border: none;
-      padding: 0;
-      a {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        color: var(----menu-primary);
-      }
-      &:hover {
-        color: var(----menu-primary);
+    ul.quicktabs-tabs {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+      li {
+        width: 50%;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+  
+        a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          color: var(--menu-primary);
+          text-decoration: none;
+        }
+  
+        a:hover {
+          color: var(--menu-primary);
+          background-color: var(--menu-primary-light);
+        }
+  
+        a:active {
+          color: var(--menu-primary);
+          background: var(--menu-primary-light);
+        }
       }
     }
-    &:active {
-      a {
-        color: var(----menu-primary);
-        background: var(----menu-primary);
-      }
-      &:hover {
-        color: var(----menu-primary);
-      }
-    }
-  }
+  
   .quicktabs-main {
     padding: 0;
     >.quicktabs-tabpage {
@@ -43,3 +44,15 @@
     }
   }
 }
+
+
+/* @media (min-width: 468px) and (max-width: 767px) {
+  .quicktabs-tabs {
+    flex-direction: column;
+
+    li {
+      width: 100%;
+    }
+  }
+} */
+

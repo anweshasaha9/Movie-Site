@@ -11,8 +11,7 @@
 						{{ page.logo }}
 					</div>
 					<div class="col-10">
-						<div
-							class="menu-search-wrapper">
+						<div class="menu-search-wrapper">
 							<nav class="primary-menu">
 								{{ page.primary_menu }}
 							</nav>
@@ -24,6 +23,7 @@
 				</div>
 			</header>
 		{% endblock %}
+
 		<div id="main-wrapper" class="layout-main-wrapper clearfix">
 			<div id="main" class="layout-row">
 				<div class="col-left">
@@ -54,6 +54,7 @@
 				</div>
 			</div>
 		</div>
+
 		<footer class="site-footer">
 			{% block footer %}
 				<div class="{{ container|default('container') }}">
@@ -65,18 +66,3 @@
 		</footer>
 	</div>
 </div>
-
-{# {% for item in items %}
-  <div class="field-item">
-    {% if item.content['#markup'] is not empty %}
-      <div class="image-wrapper">
-        {# Apply a class directly to the image field #}
-        {# {{ item.content|without('class') }}
-        <img src="{{ item.content['#url'] }}" class="custom-image-class" alt="{{ item.alt }}">
-      </div>
-    {% else %}
-      <p>No image available.</p>
-    {% endif %}
-  </div>
-{% endfor %}
-web/themes/custom/daisy/templates/nodes/field--node--field-poster--movie--genre-mode.html.twig  #}
