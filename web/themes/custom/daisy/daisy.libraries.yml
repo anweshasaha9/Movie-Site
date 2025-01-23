@@ -2,11 +2,7 @@ global-styling:
   css:
     theme:
       css/utilities/variables.css: {}
-      css/styles.css: {}
-  js: 
-    js/breakpoints.config.js: {}
-  dependencies:
-    - core/drupal
+      css/styles.css: { attributes: { media: print, onload: "this.media='all'" } }
 
 framework:
   css:
@@ -22,6 +18,11 @@ primary_menu:
   css:
     theme:
       css/primary_menu.css: {}
+  js:
+    js/primary_menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
 
 footer:
   css:

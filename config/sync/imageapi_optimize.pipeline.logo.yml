@@ -1,0 +1,7 @@
+uuid: 3c528ea3-1789-4ae6-b479-2ce8196425d9
+langcode: en
+status: true
+dependencies: {  }
+name: logo
+label: Logo
+processors: {  }

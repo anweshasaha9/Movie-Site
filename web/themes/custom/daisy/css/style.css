@@ -5,7 +5,6 @@
 @import url("elements/views-table.css");
 @import url("genre.css");
 @import url("elements/pager.css");
-@import url("utilities/breakpoints.css");
 
 * {
   padding: 0;

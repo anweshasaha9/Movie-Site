@@ -1,9 +1,12 @@
 {{ attach_library('daisy/style.css') }}
+{{ attach_library('daisy/primary_menu') }}
+{{ attach_library('daisy/font_awesome') }}
 
 {% set sidebar_left_exists = page.sidebar_left|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_right_exists = page.sidebar_right|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 <div id="page-wrapper">
 	<div id="page">
+
 		{% block head %}
 			<header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
 				<div class="container layout-header-row">
@@ -11,6 +14,7 @@
 						{{ page.logo }}
 					</div>
 					<div class="col-10">
+						<button class="hamburger" onclick="toggleMenu()">☰</button>
 						<div class="menu-search-wrapper">
 							<nav class="primary-menu">
 								{{ page.primary_menu }}
@@ -23,6 +27,7 @@
 				</div>
 			</header>
 		{% endblock %}
+
 
 		<div id="main-wrapper" class="layout-main-wrapper clearfix">
 			<div id="main" class="layout-row">

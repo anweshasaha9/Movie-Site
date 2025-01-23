@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://logom.png'
+  path: 'public://logo.webp'
 favicon:
   use_default: 1
 bootstrap_source: bootstrap/bootswatch_litera
@@ -80,3 +80,6 @@ bootstrap_scroll_spy: ''
 bootstrap_google_fonts: monserrat_lato
 bootstrap_bootstrap_icons: 1
 bootstrap_icons: material_design_icons
+bootstrap_region_clean_logo: 0
+bootstrap_region_width_logo: 0
+bootstrap_region_class_logo: row

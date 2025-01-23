@@ -1,41 +1,72 @@
-@import url("utilities/list-utilities.css");
-@import url("utilities/link.css");
-
-.navbar-nav {
-  flex-direction: row;
-  justify-content: space-around;
+/* General styles for the header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Make the header a positioning context */
+  z-index: 10; /* Ensure header stays on top */
 }
 
-/* @media only screen and (min-width: 480px) {
-  .nav{
-    justify-content: center;
-  }
-} */
-
-.dropdown-menu {
-  background: var(--light-pink);
-
-  li {
-    &:hover {
-      background: var(--white);
-    }
-
-    &:hover a {
-      color: var(--menu-primary);
-    }
-    
-    a {
-      color: var(--black);
-    }
-  }
+/* Default menu styles for large screens */
+.menu-search-wrapper {
+  display: flex; /* Menu is always visible in row format on large screens */
+  gap: 10px;
+  align-items: center;
 }
 
-@media (min-width: 350px) and (max-width: 1280px) {
+/* Styles for large screens */
+@media (min-width: 1281px) {
   .menu-search-wrapper {
+    display: flex; /* Always visible, horizontal on large screens */
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger button on large screens */
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 1280px) {
+  .menu-search-wrapper {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the header on small screens */
+    top: 100%; /* Just below the header */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: var(--black); /* Background for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 10px 0; /* Spacing */
+    z-index: 9; /* Ensure it's below the header */
     flex-direction: column;
   }
 
-  .search-form {
-    display: none;
+  .hamburger {
+    display: block; /* Show hamburger button on small screens */
+    background: transparent;
+    border: none;
+    font-size: 24px; /* Increase size of the hamburger */
+    position: absolute; /* Position it relative to the header container */
+    right: 20px; /* Align it to the right */
+    top: 50%; /* Vertically center the button */
+    transform: translateY(-50%); /* Adjust the top position for perfect centering */
+    z-index: 11; /* Ensure the hamburger stays above other elements */
+  }
+
+  .dropdown-menu {
+  background: var(--menu-primary);
+    
+  a {
+    color: var(--black);
+    font-weight: var(--font-weight-400);
+  }
   }
 }
+
