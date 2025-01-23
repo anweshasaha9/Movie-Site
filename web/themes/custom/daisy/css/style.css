@@ -5,10 +5,28 @@
 @import url("elements/views-table.css");
 @import url("genre.css");
 @import url("elements/pager.css");
+@import url("utilities/breakpoints.css");
 
 * {
   padding: 0;
   margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  z-index: 1000;
+
+  &:focus {
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    color: #007bff; /* Custom color */
+    z-index: 1001; /* Ensure it appears above other elements */
+    text-decoration: underline; /* Optional: To indicate focus */
+  }
 }
 
 #page {

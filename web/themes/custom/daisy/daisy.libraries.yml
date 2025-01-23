@@ -48,3 +48,9 @@ block-list:
   css:
     theme:
       css/elements/block-list.css: {}
+
+accessibility:
+  js:
+    js/accessibility.js: {}
+  dependencies:
+    - core/jquery

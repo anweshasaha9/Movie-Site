@@ -1,73 +1,75 @@
 {{ attach_library('daisy/style.css') }}
 {{ attach_library('daisy/primary_menu') }}
 {{ attach_library('daisy/font_awesome') }}
+{{ attach_library('daisy/accessibility') }}
 
 {% set sidebar_left_exists = page.sidebar_left|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_right_exists = page.sidebar_right|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 <div id="page-wrapper">
-	<div id="page">
+    <div id="page">
 
-		{% block head %}
-			<header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
-				<div class="container layout-header-row">
-					<div class="col-2">
-						{{ page.logo }}
-					</div>
-					<div class="col-10">
-						<button class="hamburger" onclick="toggleMenu()">☰</button>
-						<div class="menu-search-wrapper">
-							<nav class="primary-menu">
-								{{ page.primary_menu }}
-							</nav>
-							<div class="search-button">
-								{{ page.search_button }}
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-		{% endblock %}
+        <a href="#main-content" class="skip-link" tabindex="-1" aria-label="{{ 'Skip to content'|t }}">{{ 'Skip to content'|t }}</a>
 
+        {% block head %}
+        <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+            <div class="container layout-header-row">
+                <div class="col-2">
+                    <a href="{{ path('<front>') }}" tabindex="0" id="logo">{{ page.logo }}</a>
+                </div>
+                <div class="col-10">
+                    <button class="hamburger" tabindex="0" onclick="toggleMenu()" aria-label="{{ 'Open menu'|t }}">☰</button>
+                    <div class="menu-search-wrapper">
+                        <nav class="primary-menu" tabindex="0" role="navigation" aria-label="{{ 'Main Menu'|t }}">
+                            {{ page.primary_menu }}
+                        </nav>
+                        <div class="search-button" tabindex="0">
+                            {{ page.search_button }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
 
-		<div id="main-wrapper" class="layout-main-wrapper clearfix">
-			<div id="main" class="layout-row">
-				<div class="col-left">
-					{% if sidebar_left_exists %}
-						<aside class="section" role="complementary">
-							{{ page.sidebar_left }}
-						</aside>
-					{% endif %}
-				</div>
-				<div class="col-content">
-					{% if page.breadcrumb %}
-						<div class="breadcrumb-wrapper">
-							{{ page.breadcrumb }}
-						</div>
-					{% endif %}
-					<section class="section">
-						{% block content %}
-							{{ page.content }}
-						{% endblock %}
-					</section>
-				</div>
-				<div class="col-right">
-					{% if sidebar_right_exists %}
-						<aside class="section" role="complementary">
-							{{ page.sidebar_right }}
-						</aside>
-					{% endif %}
-				</div>
-			</div>
-		</div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+            <div id="main" class="layout-row" id="main-content">
+                <div class="col-left">
+                    {% if sidebar_left_exists %}
+                        <aside class="section" role="complementary" tabindex="0">
+                            {{ page.sidebar_left }}
+                        </aside>
+                    {% endif %}
+                </div>
+                <div class="col-content">
+                    {% if page.breadcrumb %}
+                        <div class="breadcrumb-wrapper">
+                            {{ page.breadcrumb }}
+                        </div>
+                    {% endif %}
+                    <section class="section">
+                        {% block content %}
+                            {{ page.content }}
+                        {% endblock %}
+                    </section>
+                </div>
+                <div class="col-right">
+                    {% if sidebar_right_exists %}
+                        <aside class="section" role="complementary" tabindex="0">
+                            {{ page.sidebar_right }}
+                        </aside>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
 
-		<footer class="site-footer">
-			{% block footer %}
-				<div class="{{ container|default('container') }}">
-					<div class="site-footer__top clearfix">
-						{{ page.footer|default('') }}
-					</div>
-				</div>
-			{% endblock %}
-		</footer>
-	</div>
+        <footer class="site-footer">
+            {% block footer %}
+            <div class="{{ container|default('container') }}">
+                <div class="site-footer__top clearfix">
+                    {{ page.footer|default('') }}
+                </div>
+            </div>
+            {% endblock %}
+        </footer>
+    </div>
 </div>
