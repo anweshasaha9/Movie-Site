@@ -1,17 +1,20 @@
 .breadcrumb-item {
+
+  font-size: 20px;
+
   &.active {
-    color: var(--button-secondary);
+    color: var(--deep-pink);
   }
 
   a {
-    color: var(--default-color, #000);
+    color: var(--default-color, var(--black));
     
     &:hover {
-      color: var(--button-secondary); 
+      color: var(--deep-pink); 
     }
     
     &:focus, &:active {
-      color: var(--button-secondary); 
+      color: var(--deep-pink); 
     }
   }
 }

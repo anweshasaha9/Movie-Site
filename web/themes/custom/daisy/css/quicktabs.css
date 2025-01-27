@@ -1,10 +1,9 @@
-@import url("utilities/variables.css");
-
 .pamela {
     ul.quicktabs-tabs {
       display: flex;
       flex-direction: row;
       margin-bottom: 0;
+
       li {
         width: 50%;
         background-color: transparent;
@@ -17,6 +16,7 @@
           text-align: center;
           color: var(--menu-primary);
           text-decoration: none;
+          font-size: var(--font-size-25);
         }
   
         a:hover {
@@ -42,17 +42,28 @@
         color: var(--primary);
       }
     }
+
+    .views-field-title a {
+      font-size: var(--font-size-24);
+      font-weight: var(--font-weight-600);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
   }
 }
 
-
-/* @media (min-width: 468px) and (max-width: 767px) {
-  .quicktabs-tabs {
-    flex-direction: column;
-
-    li {
-      width: 100%;
-    }
+@media (min-width: 350px) and (max-width: 768px) {
+  .pamela ul.quicktabs-tabs li a {
+    font-size: var(--font-size-22);
   }
-} */
 
+  .pamela .quicktabs-main .views-field-title a {
+    font-size: var(--font-size-20);
+  }
+
+  .pamela .quicktabs-main .views-field-body p {
+    font-size: var(--font-size-15);
+  }
+}

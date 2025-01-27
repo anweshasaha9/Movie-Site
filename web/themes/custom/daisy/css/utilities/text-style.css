@@ -1,6 +1,10 @@
 @import url("fonts.css");
 @import url("link.css");
 
+h1 {
+  color: var(--secondary);
+}
+
 h2 {
   font-size: var(--font-size-25);
   color: var(--menu-primary);

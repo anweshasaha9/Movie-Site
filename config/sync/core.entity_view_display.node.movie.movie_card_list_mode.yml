@@ -112,7 +112,7 @@ third_party_settings:
                 label: hidden
                 settings:
                   image_link: ''
-                  image_style: thumbnail
+                  image_style: max_325x325
                   image_loading:
                     attribute: lazy
                 third_party_settings: {  }

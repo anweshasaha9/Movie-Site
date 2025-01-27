@@ -1,23 +1,43 @@
 .views-view-table {
   border: 2px solid var(--black);
-  th {
-    border: 2px solid var(--black);
-    color: var(--black); 
-    font-weight: bolder;
-    font-size: larger;
+}
+
+.views-view-table th {
+  border: 2px solid var(--black);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-25); 
+}
+
+.views-view-table th a {
+  color: var(--black); 
+}
+
+.views-view-table td {
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-size: var(--font-size-20);
+}
+
+.views-view-table td a {
+  color: var(--black); 
+  text-decoration: none;
+}
+
+.views-view-table tbody tr:nth-child(even) {
+  background-color: var(--white);
+}
+
+.views-view-table tbody tr:nth-child(odd) {
+  background-color: var(--light-pink);
+}
+
+/* Media Query for font size adjustment */
+@media (min-width: 350px) and (max-width: 768px) {
+  .views-view-table th {
+    font-size: var(--font-size-22);
   }
-  td {
-    border: 2px solid var(--black);
-    color: var(--var(--black));
-  }
-  tbody {
-    tr {
-      &:nth-child(even) {
-        background-color: var(--white);
-      }
-      &:nth-child(odd) {
-        background-color: var(--light-pink);
-      }
-    }
+
+  .views-view-table td {
+    font-size: var(--font-size-15);
   }
 }

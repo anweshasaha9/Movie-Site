@@ -21,7 +21,7 @@ primary_menu:
   js:
     js/primary_menu.js: {}
   dependencies:
-    - core/jquery
+    # - core/jquery
     - core/drupal
 
 footer:

@@ -2,17 +2,23 @@
 
   /* Colors */
   --primary: #e7d9d8;
+  --secondary: #655a5a;
   --menu-primary: #817372;
   --hover-primary: white;
+  --hover-secondary: #c17072;
   --button-primary: #da696d;
   --button-secondary: #b24d50;
+  --deep-pink: #9f3f3f;
   --light-pink: rgba(255, 0, 0, 0.08);
   --black: black;
   --white: white;
+  --deep-blue: #007bff;
 
   /* Font Sizes */
   --font-size-25: 25px;
+  --font-size-24: 24px;
   --font-size-22: 22px;
+  --font-size-20: 20px;
   --font-size-15: 15px;
 
   /* Font Weights */
@@ -20,6 +26,8 @@
   --font-weight-400: 400;
 
    /* Image Widths */
+   --width-200: 200px;
+  --width-150: 150px;
   --width-100: 100px;
   --width-90: 90px;
 }
