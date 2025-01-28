@@ -71,17 +71,17 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 11;
+      cursor: pointer;
+    transition: transform 0.2s ease-in-out; 
     }
 
-    .dropdown-menu {
-    background: var(--menu-primary);
-      
-    a {
-      color: var(--black);
-      font-weight: var(--font-weight-400);
+    .hamburger.menu-open {
+      transform: rotate(90deg); 
+    }  
+
+    .nav-link {
+      color: var(--white);
     }
-    }
-  }
 
   .menu-search-wrapper {
     display: none;
@@ -90,3 +90,4 @@
   .menu-search-wrapper.menu-open {
     display: flex;
   }
+}

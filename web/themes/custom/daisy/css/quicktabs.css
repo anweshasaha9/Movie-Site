@@ -14,19 +14,19 @@
           display: inline-block;
           width: 100%;
           text-align: center;
-          color: var(--menu-primary);
+          color: var(--black);
           text-decoration: none;
           font-size: var(--font-size-25);
         }
   
         a:hover {
-          color: var(--menu-primary);
-          background-color: var(--menu-primary-light);
+          color: var(--secondary);
+          background-color: var(--white);
         }
   
         a:active {
-          color: var(--menu-primary);
-          background: var(--menu-primary-light);
+          color: var(--secondary);
+          background: var(--white);
         }
       }
     }
@@ -39,8 +39,12 @@
       background: var(--menu-primary);
       color: var(--primary);
       a {
-        color: var(--primary);
+        color: var(--white);
       }
+    }
+
+    p {
+      color: var(--white);
     }
 
     .views-field-title a {

@@ -4,6 +4,6 @@
   align-items: stretch;
 
   a {
-    color: var(--menu-primary);
+    color: var(--text-secondary);
   }
 }

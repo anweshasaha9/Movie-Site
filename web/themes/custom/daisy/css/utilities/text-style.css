@@ -2,12 +2,12 @@
 @import url("link.css");
 
 h1 {
-  color: var(--secondary);
+  color: var(--text-primary);
 }
 
 h2 {
   font-size: var(--font-size-25);
-  color: var(--menu-primary);
+  color: var(--text-primary);
 }
 
 p {

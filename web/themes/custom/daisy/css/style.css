@@ -69,12 +69,6 @@
   gap: 20px;
 }
 
-.logo {
-  flex: 0 0 16.666%;
-  max-width: 16.666%;
-  text-align: left;
-}
-
 .menu-search-wrapper {
   display: flex;
   justify-content: space-between;
@@ -100,7 +94,7 @@
 
 .node__title span {
   font-size: var(--font-size-25);
-  color: var(--button-secondary);
+  color: var(--text-primary);
 
   &:hover {
     color: var(--hover-secondary);

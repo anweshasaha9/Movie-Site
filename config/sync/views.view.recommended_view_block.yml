@@ -110,6 +110,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        field_movie_rating_value:
+          id: field_movie_rating_value
+          table: node__field_movie_rating
+          field: field_movie_rating_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         created:
           id: created
           table: node_field_data
@@ -126,19 +139,6 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
-        field_movie_rating_value:
-          id: field_movie_rating_value
-          table: node__field_movie_rating
-          field: field_movie_rating_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
       arguments: {  }
       filters:
         status:

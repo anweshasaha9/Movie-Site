@@ -1,14 +1,16 @@
 :root {
 
   /* Colors */
-  --primary: #e7d9d8;
+  --primary: #d1c0bf;
   --secondary: #655a5a;
   --menu-primary: #817372;
   --hover-primary: white;
   --hover-secondary: #c17072;
   --button-primary: #da696d;
   --button-secondary: #b24d50;
-  --deep-pink: #9f3f3f;
+  --deep-pink: #6f1f1f;
+  --text-primary: #320f10;
+  --text-secondary: #2a2323;
   --light-pink: rgba(255, 0, 0, 0.08);
   --black: black;
   --white: white;

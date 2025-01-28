@@ -37,7 +37,7 @@ configuration_data:
           hide_title: true
       block_content:
         options:
-          bid: 'views_block:news_quicktab-block_3'
+          bid: 'views_block:news_quicktab-homepage_movie_news'
           block_title: ''
           display_title: false
   -
@@ -60,6 +60,6 @@ configuration_data:
           hide_title: true
       block_content:
         options:
-          bid: 'views_block:news_quicktab-block_4'
+          bid: 'views_block:news_quicktab-homepage_celebrity_news'
           block_title: ''
           display_title: false

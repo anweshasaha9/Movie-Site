@@ -19,7 +19,7 @@
 
 .movie-links-wrapper a{
   text-decoration: underline;
-  color: var(--menu-primary);
+  color: var(--text-primary);
 
   &:hover {
     color: var(--button-secondary);

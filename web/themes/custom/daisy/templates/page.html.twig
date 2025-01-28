@@ -14,7 +14,7 @@
         <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
             <div class="container layout-header-row">
                 <div class="col-2">
-                    <a href="{{ path('<front>') }}" tabindex="0" id="logo">{{ page.logo }}</a>
+                    <a href="{{ path('<front>') }}" tabindex="0" id="logo" aria-label="{{ 'Home'|t }}" title="{{ 'Home'|t }}">{{ page.logo }}</a>
                 </div>
                 <div class="col-10">
                     <button class="hamburger" tabindex="0" onclick="toggleMenu()" aria-label="{{ 'Open menu'|t }}">☰</button>

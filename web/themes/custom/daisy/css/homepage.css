@@ -15,15 +15,13 @@
     margin: 10px 0 0;
   }
   h2 {
-    color: var(--primary);
+    color: var(--black);
     background: var(--menu-primary);
     margin: 0;
     padding: 10px 0 10px 10px;
-    a {
-      color: var(--black);
-      font-size: var(--font-size-25);
-      font-weight: var(--font-weight-600);
-    }
+  }
+  a {
+    color: var(--text-secondary);
   }
 }
 
@@ -42,7 +40,7 @@
 .block--3 {
   padding: 20px 0 0;
   h2 {
-    color: var(--primary);
+    color: var(--black);
     background: var(--menu-primary);
     margin: 0;
     padding: 10px 0 10px 10px;
@@ -54,10 +52,7 @@
   .node__title {
     background: transparent;
   }
-  img {
-    width: auto;
-    height: var(--width-200);
-  }
+  
   .node--type-movie {
     padding: 0 10px 10px;
     background: var(--light-pink);
