@@ -6,7 +6,7 @@
 @import url("genre.css");
 @import url("elements/pager.css");
 @import url("utilities/breakpoints.css");
-@import url("primary_menu.css");
+@import url("primary-menu.css");
 
 * {
   padding: 0;

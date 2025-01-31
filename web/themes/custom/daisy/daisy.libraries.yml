@@ -14,14 +14,13 @@ logo:
     theme:
       css/logo.css: {}
 
-primary_menu:
+primary-menu:
   css:
     theme:
-      css/primary_menu.css: {}
+      css/primary-menu.css: {}
   js:
-    js/primary_menu.js: {}
+    js/primary-menu.js: {}
   dependencies:
-    # - core/jquery
     - core/drupal
 
 footer:
@@ -49,8 +48,8 @@ block-list:
     theme:
       css/elements/block-list.css: {}
 
-accessibility:
+keyboard-accessibility:
   js:
-    js/accessibility.js: {}
+    js/keyboard-accessibility.js: {}
   dependencies:
     - core/jquery

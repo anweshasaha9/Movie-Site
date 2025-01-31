@@ -14,7 +14,7 @@
     align-items: center;
   }
 
-  .dropdown-item a {
+  .header .dropdown-item a {
     color: var(--black);
 
     &:hover {

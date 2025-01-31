@@ -7,7 +7,7 @@
 
 /* Homepage Recent Lists Section */
 
-.block--1 {
+.recent-lists-section {
   padding: 20px 0 0;
   .view-display-id-block_1 {
     padding: 10px 10px 10px 10px;
@@ -27,17 +27,17 @@
 
 
 /* Homepage News Section */
-.block--2 {
+.news-section {
   padding: 20px 0 0;
 }
 
-.block--2 .views-field-title a {
+.news-section .views-field-title a {
   font-size: var(--font-weight-600) !important;
 }
 
 /* Homepage Latest Reviews Section */
 
-.block--3 {
+.latest-reviews-section {
   padding: 20px 0 0;
   h2 {
     color: var(--black);
@@ -49,10 +49,13 @@
       font-size: var(--font-size-25);
     }
   }
-  .node__title {
-    background: transparent;
+
+  .view-latest-reviews-homepage {
+    h2 {
+      background: transparent;
+    }
   }
-  
+
   .node--type-movie {
     padding: 0 10px 10px;
     background: var(--light-pink);
@@ -71,8 +74,8 @@
 }
 
 @media (min-width: 350px) and (max-width: 1280px) {
-  .block--2 h2,
-  .block--3 h2 {
+  .news-section h2,
+  .latest-reviews-section h2 {
     font-size: var(--font-size-22);
   }
 

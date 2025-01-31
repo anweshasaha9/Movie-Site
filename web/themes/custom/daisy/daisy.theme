@@ -20,10 +20,6 @@ function daisy_preprocess_block(&$variables) {
   if (in_array($block_id, $block_list_view)) {
     $variables['#attached']['library'][] = 'daisy/block-list';
   }
-
-  // Pager library attachment to site pager accross all pages
-  
-
 }
 
 
