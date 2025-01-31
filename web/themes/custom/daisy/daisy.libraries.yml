@@ -47,9 +47,3 @@ block-list:
   css:
     theme:
       css/elements/block-list.css: {}
-
-keyboard-accessibility:
-  js:
-    js/keyboard-accessibility.js: {}
-  dependencies:
-    - core/jquery
