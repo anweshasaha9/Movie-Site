@@ -1,0 +1,49 @@
+global-styling:
+  css:
+    theme:
+      css/utilities/variables.css: {}
+      css/styles.css: { attributes: { media: print, onload: "this.media='all'" } }
+
+framework:
+  css:
+    theme:
+      css/style.css: {}
+
+logo:
+  css:
+    theme:
+      css/logo.css: {}
+
+primary-menu:
+  css:
+    theme:
+      css/primary-menu.css: {}
+  js:
+    js/primary-menu.js: {}
+  dependencies:
+    - core/drupal
+
+footer:
+  css:
+    theme:
+      css/footer.css: {}
+
+homepage:
+  css:
+    theme:
+      css/homepage.css: {}
+
+movie-links:
+  css:
+    theme:
+      css/movie-links.css: {}
+
+quicktabs:
+  css:
+    theme:
+      css/quicktabs.css: {}
+
+block-list:
+  css:
+    theme:
+      css/elements/block-list.css: {}

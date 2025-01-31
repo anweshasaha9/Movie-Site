@@ -1,0 +1,10 @@
+{{ attach_library('daisy/movie-links') }}
+<div{{ attributes.addClass(classes) }}>
+  <div class="movie-links-wrapper">
+    {% for item in items %}
+      <div{{ item.attributes.addClass('movie-links') }}>
+        {{ item.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+uuid: 66bae7e8-9610-4ce9-afac-2a37f550ad39
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - daisy
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: daisy_search_form_wide
+theme: daisy
+region: header
+weight: -12
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

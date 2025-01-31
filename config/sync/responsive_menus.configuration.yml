@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: Ew71dtLpbljPB4lmHfbm09DRmpU18l9fJZxgLKI-DDI
+style: codrops_responsive_multi
+ignore_admin: 1
+style_settings:
+  selector_info: ''
+  responsive_menus_simple_absolute: 1
+  responsive_menus_disable_mouse_events: 0
+  responsive_menus_remove_attributes: 1
+  responsive_menus_css_selectors: .primary-menu
+  responsive_menus_simple_text: ☰
+  responsive_menus_media_size: '1200'
+  responsive_menus_media_unit: px

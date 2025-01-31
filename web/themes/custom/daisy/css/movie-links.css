@@ -1,0 +1,38 @@
+@import url("utilities/text-style.css");
+
+.movie-links {
+  /* display: flex; */
+  padding-right: 20px;
+  border-right: 2px solid var(--menu-primary);
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.movie-links-wrapper {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.movie-links-wrapper a{
+  text-decoration: underline;
+  color: var(--text-primary);
+
+  &:hover {
+    color: var(--button-secondary);
+  }
+}
+
+@media (min-width: 350px) and (max-width: 768px) {
+  .movie-links {
+    border: none;
+  }
+
+  .movie-links-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

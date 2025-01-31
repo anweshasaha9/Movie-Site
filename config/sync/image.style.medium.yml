@@ -12,8 +12,8 @@ effects:
     id: image_scale
     weight: 0
     data:
-      width: 220
-      height: 220
+      width: 100
+      height: 100
       upscale: false
   c410ed2f-aa30-4d9c-a224-d2865d9188cd:
     uuid: c410ed2f-aa30-4d9c-a224-d2865d9188cd
@@ -21,3 +21,4 @@ effects:
     weight: 2
     data:
       extension: webp
+pipeline: __default__

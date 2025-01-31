@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 id: node.genre_mode
-label: 'Genre Mode'
+label: 'Movie Card Mode'
 description: ''
 targetEntityType: node
 cache: true

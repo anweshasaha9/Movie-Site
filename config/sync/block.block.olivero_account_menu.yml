@@ -1,6 +1,6 @@
 uuid: c6f92a7b-17c6-43fe-8731-3ea107fdb8a6
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -12,8 +12,8 @@ _core:
   default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
 id: olivero_account_menu
 theme: olivero
-region: secondary_menu
-weight: -4
+region: sidebar
+weight: -10
 provider: null
 plugin: 'system_menu_block:account'
 settings:

@@ -1,0 +1,23 @@
+uuid: 71b5c5c4-7ad8-439a-a665-ec8bd744ff70
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+  theme:
+    - daisy
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: daisy_syndicate
+theme: daisy
+region: header
+weight: -1
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

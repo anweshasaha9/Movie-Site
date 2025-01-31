@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implements hook_preprocess_block() for node templates.
+ */
+function daisy_preprocess_block(&$variables) {
+
+  // Quitabs library attachment to quicktabs block
+  // Get the block's machine name.
+  $block_id = $variables['elements']['#id'] ?? '';
+  // Check if the block's ID contains 'quicktabsnews'.
+  if (strpos($block_id, 'quicktabsnews') !== false) {
+    $variables['#attached']['library'][] = 'daisy/quicktabs';
+  }
+  // Define the list blocks.
+  $block_list_view = [
+    'daisy_views_block__recommended_view_block_block_1',
+    'views_block__top_10_lists_block_1',
+  ];
+  if (in_array($block_id, $block_list_view)) {
+    $variables['#attached']['library'][] = 'daisy/block-list';
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function daisy_preprocess_page_title(&$variables) {
+  // Check if the current route is a taxonomy term view.
+  $taxonomy_page = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  if ($taxonomy_page) {
+    unset($variables['title']);
+  }
+}

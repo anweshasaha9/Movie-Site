@@ -1,0 +1,11 @@
+uuid: d22abe5c-6437-412b-91b8-1628170194d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.thumbnail
+id: poster
+label: Poster
+image_style_mappings: {  }
+breakpoint_group: responsive_image
+fallback_image_style: thumbnail

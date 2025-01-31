@@ -5,20 +5,19 @@ dependencies:
   config:
     - core.entity_view_mode.node.genre_mode
     - field.field.node.movie.body
-    - field.field.node.movie.field_buy_on_dvd
     - field.field.node.movie.field_genre
-    - field.field.node.movie.field_in_cinemas
-    - field.field.node.movie.field_netflix
+    - field.field.node.movie.field_links
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_poster
     - field.field.node.movie.field_release_date
-    - field.field.node.movie.field_trailers
+    - field.field.node.movie.field_review
     - field.field.node.movie.layout_builder__layout
     - node.type.movie
   module:
     - datetime
     - image
     - layout_builder
-    - link
+    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -27,34 +26,14 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Created On'
           context_mapping: {  }
-          column_widths: 25-75
         components:
-          e013c74d-ab57-46ea-bcf3-d2cadc6ec1d4:
-            uuid: e013c74d-ab57-46ea-bcf3-d2cadc6ec1d4
-            region: first
-            configuration:
-              id: 'field_block:node:movie:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          e40789b3-0b20-449d-9b31-0b69ed064970:
-            uuid: e40789b3-0b20-449d-9b31-0b69ed064970
-            region: second
+          0514e436-e86c-441a-bc12-7fd7d71e92a8:
+            uuid: 0514e436-e86c-441a-bc12-7fd7d71e92a8
+            region: content
             configuration:
               id: 'field_block:node:movie:created'
               label: 'Created on'
@@ -65,10 +44,10 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: timestamp
-                label: inline
+                label: hidden
                 settings:
-                  date_format: html_date
-                  custom_date_format: ''
+                  date_format: custom
+                  custom_date_format: d/m/y
                   timezone: ''
                   tooltip:
                     date_format: long
@@ -91,28 +70,6 @@ third_party_settings:
           context_mapping: {  }
           column_widths: 25-75
         components:
-          19be6ae4-f52e-4303-a77b-9f162883c8bb:
-            uuid: 19be6ae4-f52e-4303-a77b-9f162883c8bb
-            region: first
-            configuration:
-              id: 'field_block:node:movie:field_poster'
-              label: Poster
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           150d99a8-dfac-4382-be71-7c4d9cc29b64:
             uuid: 150d99a8-dfac-4382-be71-7c4d9cc29b64
             region: second
@@ -132,102 +89,51 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_fourcol_section
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-        components:
-          ec4f01e5-039c-4104-815f-be7c8ed844ad:
-            uuid: ec4f01e5-039c-4104-815f-be7c8ed844ad
+          0d624f52-79a7-4c06-b483-05a42b28081e:
+            uuid: 0d624f52-79a7-4c06-b483-05a42b28081e
             region: first
             configuration:
-              id: 'field_block:node:movie:field_trailers'
-              label: Trailers
+              id: 'field_block:node:movie:field_poster'
+              label: Poster
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: link
+                type: image
                 label: hidden
                 settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
                 third_party_settings: {  }
-            weight: 0
+            weight: 2
             additional: {  }
-          5457fd5f-e256-4077-a75b-574066c8dee0:
-            uuid: 5457fd5f-e256-4077-a75b-574066c8dee0
-            region: second
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Links Section'
+          context_mapping: {  }
+        components:
+          c9d0ca5c-6eb3-464b-beb6-9599e97991dc:
+            uuid: c9d0ca5c-6eb3-464b-beb6-9599e97991dc
+            region: content
             configuration:
-              id: 'field_block:node:movie:field_in_cinemas'
-              label: 'In Cinemas'
+              id: 'field_block:node:movie:field_links'
+              label: Links
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: link
+                type: entity_reference_revisions_entity_view
                 label: hidden
                 settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          50fe66db-587d-439d-814e-b7e55c7a2d19:
-            uuid: 50fe66db-587d-439d-814e-b7e55c7a2d19
-            region: third
-            configuration:
-              id: 'field_block:node:movie:field_buy_on_dvd'
-              label: 'Buy on DVD'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          a88d5986-9464-4c37-bb1f-089fa78d1c9b:
-            uuid: a88d5986-9464-4c37-bb1f-089fa78d1c9b
-            region: fourth
-            configuration:
-              id: 'field_block:node:movie:field_netflix'
-              label: Netflix
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: link
-                label: hidden
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
+                  view_mode: default
                 third_party_settings: {  }
             weight: 0
             additional: {  }
@@ -326,4 +232,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_links: true
+  field_movie_rating: true
+  field_review: true
   layout_builder__layout: true

@@ -1,0 +1,27 @@
+uuid: 375e3f17-1bf4-40c5-acba-c874ea3026a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.movie_links.field_link
+    - paragraphs.paragraphs_type.movie_links
+  module:
+    - link
+id: paragraph.movie_links.default
+targetEntityType: paragraph
+bundle: movie_links
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

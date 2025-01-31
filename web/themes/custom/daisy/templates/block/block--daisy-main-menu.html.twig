@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Bootstrap's theme implementation for a menu block.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('daisy/primary_menu') }}
+{% block content %}
+  <div{{ content_attributes.addClass('primary_menu') }}>
+    {{ content }}
+  </div>
+{% endblock %}

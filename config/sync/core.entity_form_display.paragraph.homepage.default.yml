@@ -1,0 +1,26 @@
+uuid: 87338f6b-12ab-480b-a9f5-fd4db8021194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage.field_homepage_blocks
+    - paragraphs.paragraphs_type.homepage
+  module:
+    - block_field
+id: paragraph.homepage.default
+targetEntityType: paragraph
+bundle: homepage
+mode: default
+content:
+  field_homepage_blocks:
+    type: block_field_default
+    weight: 0
+    region: content
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

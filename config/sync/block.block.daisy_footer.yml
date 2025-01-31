@@ -1,0 +1,25 @@
+uuid: 7d6199ca-4396-41f5-b24e-241d8bf57621
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - daisy
+id: daisy_footer
+theme: daisy
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

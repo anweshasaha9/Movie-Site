@@ -1,0 +1,23 @@
+uuid: 487c9d82-a9b7-4f90-bd1a-a387ba2f6749
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - daisy
+id: daisy_sitebranding
+theme: daisy
+region: logo
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

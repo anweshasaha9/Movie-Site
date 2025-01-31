@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.review.body
-    - field.field.node.review.field_review_genre
     - node.type.review
   module:
     - text
@@ -20,14 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_review_genre:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

@@ -1,0 +1,73 @@
+.pamela {
+    ul.quicktabs-tabs {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+
+      li {
+        width: 50%;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+  
+        a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          color: var(--black);
+          text-decoration: none;
+          font-size: var(--font-size-25);
+        }
+  
+        a:hover {
+          color: var(--secondary);
+          background-color: var(--white);
+        }
+  
+        a:active {
+          color: var(--secondary);
+          background: var(--white);
+        }
+      }
+    }
+  
+  .quicktabs-main {
+    padding: 0;
+    >.quicktabs-tabpage {
+      border-radius: inherit;
+      width: 100%;
+      background: var(--menu-primary);
+      color: var(--primary);
+      a {
+        color: var(--white);
+      }
+    }
+
+    p {
+      color: var(--white);
+    }
+
+    .views-field-title a {
+      font-size: var(--font-size-24);
+      font-weight: var(--font-weight-600);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+@media (min-width: 350px) and (max-width: 768px) {
+  .pamela ul.quicktabs-tabs li a {
+    font-size: var(--font-size-22);
+  }
+
+  .pamela .quicktabs-main .views-field-title a {
+    font-size: var(--font-size-20);
+  }
+
+  .pamela .quicktabs-main .views-field-body p {
+    font-size: var(--font-size-15);
+  }
+}

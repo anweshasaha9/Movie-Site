@@ -1,0 +1,22 @@
+uuid: aaed4112-be41-4cf6-8dee-d000005b6ff8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - daisy
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: daisy_powered
+theme: daisy
+region: header
+weight: -2
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

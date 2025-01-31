@@ -1,0 +1,22 @@
+uuid: 9cd35ed5-23b3-452c-b785-faef6dc73219
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - daisy
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: daisy_content
+theme: daisy
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

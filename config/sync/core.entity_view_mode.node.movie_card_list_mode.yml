@@ -1,0 +1,11 @@
+uuid: edf7bbf7-5683-40f6-90f9-d5067db9a998
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_card_list_mode
+label: 'Movie Card List Mode'
+description: ''
+targetEntityType: node
+cache: true
