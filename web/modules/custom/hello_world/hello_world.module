@@ -1,12 +1,10 @@
 <?php
 
-/**
- * Implements hook_block_info().
- */
+
 /**
  * Implements hook_preprocess_page().
  */
-function glint_preprocess_page(&$variables) {
+function hello_world_preprocess_page(&$variables) {
   if (\Drupal::service('path.matcher')->isFrontPage()) {
     $variables['page']['content']['hello_world_message'] = array(
       '#markup' => '<p>Hello, World!</p>',
