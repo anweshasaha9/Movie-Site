@@ -22,12 +22,10 @@ class UserInfoBlock extends BlockBase {
   public function build() {
     $uid = \Drupal::currentUser()->id();
     $user = User::load($uid);
-
     if ($user) {
       $username = $user->getDisplayName();
       $created_time = $user->getCreatedTime();
       $formatted_date = \Drupal::service('date.formatter')->format($created_time, 'custom', 'd M Y');
-
       return [
         '#theme' => 'item_list',
         '#items' => [
