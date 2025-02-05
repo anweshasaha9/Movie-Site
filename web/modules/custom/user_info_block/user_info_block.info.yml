@@ -1,0 +1,7 @@
+name: 'User Info Block'
+description: 'Displays the current user''s username and account creation date.'
+type: module
+core_version_requirement: ^10.2
+package: Custom
+dependencies:
+  - drupal:block
