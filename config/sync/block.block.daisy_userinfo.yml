@@ -1,0 +1,33 @@
+uuid: bb53875f-6f83-4c0a-909b-4e65dd1e5d30
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+    - user_info_block
+  theme:
+    - daisy
+id: daisy_userinfo
+theme: daisy
+region: content
+weight: -13
+provider: null
+plugin: user_info_block
+settings:
+  id: user_info_block
+  label: 'User Info'
+  label_display: visible
+  provider: user_info_block
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
