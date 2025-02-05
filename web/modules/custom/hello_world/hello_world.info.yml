@@ -1,0 +1,5 @@
+name: 'Hello World'
+type: module
+description: 'Displays a Hello World message on the front page.'
+package: Custom
+core_version_requirement: ^10.2

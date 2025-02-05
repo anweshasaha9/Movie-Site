@@ -1,15 +1,14 @@
 <?php
 
+
 /**
  * Implements hook_preprocess_page().
  */
 function hello_world_preprocess_page(&$variables) {
-  // Check if the current page is the front page.
   if (\Drupal::service('path.matcher')->isFrontPage()) {
-    // Add a message to the page content.
-    $variables['page']['content']['hello_world_message'] = [
+    $variables['page']['content']['hello_world_message'] = array(
       '#markup' => '<p>Hello, World!</p>',
-      '#allowed_tags' => ['p'],
-    ];
+      '#allowed_tags' => array('p'),
+    );
   }
 }
