@@ -16,12 +16,10 @@ class ThankYouController extends ControllerBase {
     // Retrieve submitted data from session
     $session = \Drupal::service('session');
     $data = $session->get('submitted_data');
-
     if ($data) {
       $full_name = $data['full_name'];
       $contact_method = $data['contact_method'] === 'phone' ? 'Phone Number' : 'Email';
       $contact_value = $data['contact_value'];
-
       $message = $this->t('Thank you @name, for submitting your contact details :- <br> @method: @value.', [
         '@name' => $full_name,
         '@method' => $contact_method,
@@ -30,9 +28,8 @@ class ThankYouController extends ControllerBase {
     } else {
       $message = $this->t('No data submitted.');
     }
-
     return [
-      '#markup' => '<p>' . $message . '</p>',
+      '#markup' => $message,
     ];
   }
 }
