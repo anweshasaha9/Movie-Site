@@ -1,0 +1,15 @@
+custom_form.display_form:
+  path: '/custom-form'
+  defaults:
+    _form: 'Drupal\custom_form\Form\CustomUserForm'
+    _title: 'Custom Form'
+  requirements:
+    _permission: 'access content'
+
+custom_form.thank_you:
+  path: 'custom-form/thank-you'
+  defaults:
+    _controller: 'Drupal\custom_form\Controller\ThankYouController::content'
+    _title: 'Thank You'
+  requirements:
+    _permission: 'access content'
