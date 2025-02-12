@@ -1,0 +1,5 @@
+name: Custom Form
+type: module
+description: Demonstrates the Drupal Form API.
+package: Example modules
+core_version_requirement: ^10.3 || ^11.0
